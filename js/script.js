@@ -4,16 +4,16 @@
 	var $questionList = $('#questionList');
 	var $questionListElements;
 
-	var $template = _.template('<li class="animated fadeInUpBig json-question"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header">Click for more</h1><p class="json-answer"><%= answer %></p></a></div></li>');
+	var $template = _.template('<li class="json-question"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header">Click for more</h1><p class="json-answer"><%= answer %></p></a></div></li>');
 
 	function renderQuestions(questions) {
 		var $fragment = $(document.createDocumentFragment());
 
 		questions.forEach(function(question) {
 			$fragment.append($template({
-				content: question.content,
-				link: question.link,
-				answer: question.answer
+				content: question.Content,
+				link: question.Link,
+				answer: question.Answer
 			}));
 		});
 
@@ -64,7 +64,7 @@
 
 
 	$.getJSON( "questions.json", renderQuestions);
-	$search.on('keyup', _.debounce(displayMatches, 200));
+	// $search.on('keyup', _.debounce(displayMatches, 200));
 
 
 

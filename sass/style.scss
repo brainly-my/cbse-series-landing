@@ -1,5 +1,3 @@
-
-
 html {
 	font-size: 100%;
 }
@@ -10,13 +8,18 @@ body {
 #header {
 	height: 500px;
 	width: 100%;
-	background: url("background.jpg") no-repeat;
+	background: url("assets/img/background.jpg") no-repeat;
 	background-size: auto 100%;
     background-position: center top;
     background-attachment: fixed;
 	h1 {
 		text-align: center;
 		padding-top: 220px;
+		font-size: 3.25rem;
+		span {
+			font-size: 4rem;
+			color: #ffbe32;
+		}
 	}
 }
 #content {
@@ -26,7 +29,7 @@ body {
 	margin: auto;
 	margin-top: -100px;
 	margin-bottom: 30px;
-	background: url('arrow-blue.png') no-repeat;
+	background: url('assets/img/arrow-mustard.png') no-repeat;
 	background-size: 40px 80px;
 	background-position: 85% 45px;
 	background-color: #fff;
@@ -38,7 +41,7 @@ body {
 		text-align: center;
 		padding: 20px 0 10px 0;
 		margin-bottom: 30px;
-		color: #5bb8ff !important;
+		color: #ffbe32 !important;
 	}
 	.mint-logo {
 		position: absolute;
@@ -55,21 +58,21 @@ body {
 				transition: 0.25s;
 			}
 			a:hover {
-				color: #5bb8ff;
+				color: #ffbe32;
 				transition: 0.25s;
 			}
 			li {
 				margin: 8px;
-				list-style-image: url('bullet.gif');
+				list-style-image: url('assets/img/bullet-mustard.gif');
 				cursor: pointer;
 				cursor: hand;
 				transition: 0.5s;
 			}
 			.js-li--blue {
-				color: #5bb8ff !important;
+				color: #ffbe32 !important;
 			}
 			li:hover {
-				color: #5bb8ff;
+				color: #ffbe32;
 				transition: 0.5s;
 			}
 			h3 {
@@ -89,7 +92,7 @@ body {
 				border-radius: 25px;
 				h3 {
 					font-size: 1rem;
-					color: #5bb8ff;
+					color: #ffbe32;
 				}
 				.json-answer {
 					position: relative;
@@ -98,8 +101,8 @@ body {
 					text-overflow: ellipsis;
 					display: -webkit-box;
 					line-height: 20px;     /* fallback */
-					max-height: 60px;      /* fallback */
-					-webkit-line-clamp: 3; /* number of lines to show */
+					max-height: 150px;      /* fallback */
+					-webkit-line-clamp: 7; /* number of lines to show */
 					-webkit-box-orient: vertical;
 				}
 				.json-answer:before {
@@ -142,7 +145,7 @@ li:nth-child(n + 3) {
 	width: 85% !important;
 }
 .mint-input--transparent-border:focus {
-	border-color: #5bb8ff !important;
+	border-color: #ffbe32 !important;
 }
 #footer {
 	position: relative;
