@@ -3,25 +3,32 @@
 	var $search = $('#search');
 	var $questionList = $('#questionList');
 	var $questionListElements;
+	var $questions;
+	var $questionsArray;
 
-	var $template = _.template('<li class="json-question"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header">Click for more</h1><p class="json-answer"><%= answer %></p></a></div></li>');
+	var $template = _.template('<li class="json-question all <%= sub_id %>"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header">Click for more</h1><p class="json-answer"><%= answer %></p></a></div></li>');
 
 	function renderQuestions(questions) {
 		var $fragment = $(document.createDocumentFragment());
 
 		questions.forEach(function(question) {
 			$fragment.append($template({
-				content: question.Content,
-				link: question.Link,
-				answer: question.Answer
+				content: question.content,
+				link: question.link,
+				answer: question.answer,
+				sub_id: question.subject_id
 			}));
 		});
 
 		$questionList.append($fragment);
+		$questions = $questionList.find(".json-question");
+		$questionsArray = Array.prototype.slice.call($questions);
 
 		$questionListElements = $questionList.children('li');
 		$questionListElements.on('click', onQuestionClick);
+
 		showFirstAnswer();
+		toggleSubjects();
 	}
 
 	function displayMatches(event) {
@@ -62,9 +69,29 @@
 		$header.addClass('js-li--blue');
 	}
 
+	function toggleSubjects() {
 
-	$.getJSON( "questions.json", renderQuestions);
-	// $search.on('keyup', _.debounce(displayMatches, 200));
+		var $buttons = $(".mint-button-secondary");
+		var order = 0;
+
+		$buttons.on('click', function() {
+			displayQuestionFromSubject($(this).data('subject'));
+		});
+
+	}
+
+	function displayQuestionFromSubject(subject) {
+		$questions.hide().removeClass('animated fadeIn');
+		$questionsArray.forEach(function(question) {
+			if ($(question).hasClass(subject)) {
+				$(question).show().addClass('animated fadeIn');
+			}
+		});
+	}
+
+
+	$.getJSON( "questions-my.json", renderQuestions);
+	$search.on('keyup', _.debounce(displayMatches, 200));
 
 
 

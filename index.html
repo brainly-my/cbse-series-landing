@@ -1,40 +1,70 @@
 <!doctype html>
 <html>
+
 <head>
 	<title>CBSE Expression Series</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+	<!-- Live reload script import
+	============================================================||▷ -->
+	<script src="live.js"></script>
+
+	<!-- Stylesheets import
+	============================================================||▷ -->
 	<link rel="stylesheet" type="text/css" href="http://styleguide.brainly.com/21.6.0/style-guide.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/animate.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
+
 <body>
+
+	<!-- FB share-button scripting
+	============================================================||▷ -->
 	<div id="fb-root"></div>
 	<script>
 		(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id))
-		  	return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-			fjs.parentNode.insertBefore(js, fjs);
-		}
-		(document, 'script', 'facebook-jssdk'));
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id))
+					return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+			(document, 'script', 'facebook-jssdk'));
 	</script>
+
+	<!-- Header
+	============================================================||▷ -->
 	<section id="header">
+
+		<!-- Main text-bit
+		=======================================||▷ -->
 		<h1 class="mint-text-bit mint-text-bit--light">
 			CBSE Expression Series<br><span>Dr. B. R. Ambedkar!</span>
 		</h1>
 	</section>
+
+	<!-- Content
+	============================================================||▷ -->
 	<section id="content">
+
+		<!-- Header logo
+		=======================================||▷ -->
 		<div class="mint-logo">
 			<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/brainly-761d75d6ea.svg">
 		</div>
+
+		<!-- Secondary text-bit
+		=======================================||▷ -->
 		<h1 class="mint-text-bit mint-text-bit--alt">
 			WHAT DO YOU NEED TO KNOW?
 		</h1>
-		<!---
+
+		<!-- Search bar
+		=======================================||▷ -->
 		<div class="mint-search">
 			<input type="search" placeholder="Find all the answers..." id="search" class="mint-input mint-input--full mint-input--transparent-border mint-input--with-icon">
 			<div class="mint-search__button">
@@ -47,19 +77,72 @@
 				</button>
 			</div>
 		</div>
-		--->
+
+		<!-- Subjects menu
+		============================================================||▷ -->
+		<div class="subjects-menu">
+			<button data-subject="all" class="mint-button-secondary mint-button-secondary--dark-inverse">
+				<div class="mint-button-secondary__hole">
+					Semua Subjek
+				</div>
+			</button>
+			<button data-subject="1" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Bahasa Malaysia
+				</div>
+			</button>
+			<button data-subject="3" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Sejarah
+				</div>
+			</button>
+			<button data-subject="4" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					English
+				</div>
+			</button>
+			<button data-subject="6" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Kimia
+				</div>
+			</button>
+			<button data-subject="7" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Biologi
+				</div>
+			</button>
+			<button data-subject="9" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Kemahiran Hidup
+				</div>
+			</button>
+			<button data-subject="19" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					PT3
+				</div>
+			</button>
+		</div>
+
+		<!-- Question list
+		============================================================||▷ -->
 		<div id="results-wrapper">
 			<ul id="questionList" class="animated fadeInUpBig">
+
+				<!-- List header
+				=======================================||▷ -->
 				<h3>
 				Choose your question:
 				</h3>
 			</ul>
+
+			<!-- No data call to action section
+			=======================================||▷ -->
 			<div class="no-data">
 				<h3>
 					Couldn't find what you were looking for?
 				</h3>
 				<div id="no-data-btn">
-					<a href="http://bit.ly/top-your-boards" target="_blank" class="mint-button-primary mint-button-primary--dark" >
+					<a href="http://bit.ly/top-your-boards" target="_blank" class="mint-button-primary mint-button-primary--dark">
 						<div class="mint-button-primary__hole">
 							Ask on Brainly!
 						</div>
@@ -68,39 +151,53 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Footer
+	============================================================||▷ -->
 	<section id="footer">
+
+		<!-- FB share button placeholder
+		=======================================||▷ -->
 		<div class="fb-share-button" data-href="http://cbse.brainly.in/expression-series/" data-layout="button_count">
 		</div>
+
+		<!-- Twitter share button placeholder
+		=======================================||▷ -->
 		<div class="twitter-share-btn">
 			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.brainly.in" data-text="Top CBSE Board Exams with Brainly!" data-hashtags="brainly">
 				Tweet
 			</a>
 		</div>
-		<script>!function(d,s,id){
-			var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-			if(!d.getElementById(id)){
-				js=d.createElement(s);
-				js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-				fjs.parentNode.insertBefore(js,fjs);
-			}}
+
+		<!-- Twitter share button scripting
+		=======================================||▷ -->
+		<script>
+			! function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0],
+					p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + '://platform.twitter.com/widgets.js';
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			}
 			(document, 'script', 'twitter-wjs');
 		</script>
-		<p>
-			Copyright © 2016 Brainly.in
-		</p>
-		</section>
 
+		<!-- Copyrights
+		=======================================||▷ -->
+		<p>
+			Copyright © 2016 Brainly.my
+		</p>
+	</section>
+
+	<!-- Scripts import
+	============================================================||▷ -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-74228963-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
 </body>
+
 </html>

@@ -34,13 +34,24 @@ body {
 	background-position: 85% 45px;
 	background-color: #fff;
 	border-radius: 30px;
+	.subjects-menu {
+		margin: 40px 0px 0px 90px !important;
+		width: 85% !important;
+		height: 100px;
+		overflow: hidden;
+		transition: 1s;
+		.mint-button-secondary {
+			margin: 2px;
+			width: 175px;
+			line-height: 1rem;
+		}
+	}
 	h1 {
 		width: 95%;
 		margin: auto;
 		font-size: 2.4rem !important;
 		text-align: center;
 		padding: 20px 0 10px 0;
-		margin-bottom: 30px;
 		color: #ffbe32 !important;
 	}
 	.mint-logo {
@@ -141,8 +152,9 @@ li:nth-child(n + 3) {
 	margin: auto;
 }
 .mint-search {
-	margin: 20px 7.5% !important;
-	width: 85% !important;
+	margin-left: 160px !important;
+	margin-top: 0px;
+	width: 600px !important;
 }
 .mint-input--transparent-border:focus {
 	border-color: #ffbe32 !important;
@@ -213,4 +225,15 @@ li:nth-child(n + 3) {
 			margin-left: -95.5px;
 		}
 	}
+}
+// Functional styles
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
 }
