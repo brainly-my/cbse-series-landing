@@ -31,7 +31,7 @@ body {
 	margin-bottom: 30px;
 	background: url('assets/img/arrow-mustard.png') no-repeat;
 	background-size: 40px 80px;
-	background-position: 85% 45px;
+	background-position: 88.4% 45px;
 	background-color: #fff;
 	border-radius: 30px;
 	.subjects-menu {
@@ -144,7 +144,7 @@ li:nth-child(n + 3) {
 		padding: 20px;
 	}
 	#no-data-btn {
-		width: 195px;
+		width: 210px;
 		margin: auto;
 	}
 }
@@ -196,4 +196,4 @@ li:nth-child(n + 3) {
 }
 
 // Partials import
-@import "rwd"; 
+@import "rwd";
