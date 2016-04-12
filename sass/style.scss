@@ -182,50 +182,7 @@ li:nth-child(n + 3) {
 		color: #383838;
 	}
 }
-@media screen and (max-width: 600px) {
-	#header {
-		background-attachment: initial;
-		h1 {
-	 		line-height: 2.2rem !important;
-	 	}
-	}
-	#content {
-		width: 100vw;
-	 	margin-top: 0;
-	 	margin-bottom: 0;
-	 	padding: 10px 5px 30px 5px;
-	 	background-image: none;
-	 	border-radius: 0;
-	 	div {
-	 		ul {
-	 			padding: 0 15px;
-	 		}
-	 	}
-	 	.mint-logo {
-	 		top: -330px;
-	 		left: 50%;
-	 		margin-left: -67px;
-	 		}
-	 	}
-	.no-data {
-		width: 100%;
-	}
-	#footer {
-		height: 80px;
-		.fb-share-button {
-			top: 10px;
-			left: 50%;
-		}
-		.twitter-share-btn {
-			top: 14px;
-			left: 24.5%;
-		}
-		p {
-			left: 50%;
-			margin-left: -95.5px;
-		}
-	}
-}
+
 // Functional styles
 .hidden {
 	visibility: hidden;
@@ -237,3 +194,6 @@ li:nth-child(n + 3) {
 	opacity: 1;
 	transition: 0.5s;
 }
+
+// Partials import
+@import "rwd"; 

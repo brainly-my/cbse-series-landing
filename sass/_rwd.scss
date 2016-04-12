@@ -1,0 +1,68 @@
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 85%;
+  }
+	#header {
+		background-attachment: initial;
+		h1 {
+      font-size: 3rem;
+	 		line-height: 2.4rem !important;
+      span {
+        font-size: 3rem;
+      }
+	 	}
+	}
+	#content {
+		width: 100vw;
+	 	margin-top: 0;
+	 	margin-bottom: 0;
+	 	padding: 10px 5px 30px 5px;
+	 	background-image: none;
+	 	border-radius: 0;
+    .subjects-menu {
+  		margin: 20px auto !important;
+  		width: 90% !important;
+  		height: 280px;
+  		overflow: hidden;
+  		transition: 1s;
+  		.mint-button-secondary {
+  			width: 90%;
+        margin-left: 5%;
+  			line-height: 0.7rem;
+  		}
+  	}
+	 	div {
+	 		ul {
+	 			padding: 0 15px;
+	 		}
+	 	}
+	 	.mint-logo {
+	 		top: -330px;
+	 		left: 50%;
+	 		margin-left: -67px;
+	 		}
+	 	}
+	.no-data {
+		width: 100%;
+	}
+  .mint-search {
+  	margin-left: 5% !important;
+  	margin-top: 0px;
+  	width: 90% !important;
+  }
+	#footer {
+		height: 80px;
+		.fb-share-button {
+			top: 13px;
+			left: 50%;
+		}
+		.twitter-share-btn {
+			top: 14px;
+			left: 17%;
+		}
+		p {
+			left: 50%;
+			margin-left: -95.5px;
+		}
+	}
+}
