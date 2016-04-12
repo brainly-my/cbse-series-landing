@@ -31,16 +31,27 @@ body {
 	margin-bottom: 30px;
 	background: url('assets/img/arrow-mustard.png') no-repeat;
 	background-size: 40px 80px;
-	background-position: 85% 45px;
+	background-position: 88.4% 45px;
 	background-color: #fff;
 	border-radius: 30px;
+	.subjects-menu {
+		margin: 40px 0px 0px 90px !important;
+		width: 85% !important;
+		height: 100px;
+		overflow: hidden;
+		transition: 1s;
+		.mint-button-secondary {
+			margin: 2px;
+			width: 175px;
+			line-height: 1rem;
+		}
+	}
 	h1 {
 		width: 95%;
 		margin: auto;
 		font-size: 2.4rem !important;
 		text-align: center;
 		padding: 20px 0 10px 0;
-		margin-bottom: 30px;
 		color: #ffbe32 !important;
 	}
 	.mint-logo {
@@ -133,7 +144,7 @@ li:nth-child(n + 3) {
 		padding: 20px;
 	}
 	#no-data-btn {
-		width: 195px;
+		width: 210px;
 		margin: auto;
 	}
 }
@@ -141,8 +152,9 @@ li:nth-child(n + 3) {
 	margin: auto;
 }
 .mint-search {
-	margin: 20px 7.5% !important;
-	width: 85% !important;
+	margin-left: 160px !important;
+	margin-top: 0px;
+	width: 600px !important;
 }
 .mint-input--transparent-border:focus {
 	border-color: #ffbe32 !important;
@@ -170,47 +182,18 @@ li:nth-child(n + 3) {
 		color: #383838;
 	}
 }
-@media screen and (max-width: 600px) {
-	#header {
-		background-attachment: initial;
-		h1 {
-	 		line-height: 2.2rem !important;
-	 	}
-	}
-	#content {
-		width: 100vw;
-	 	margin-top: 0;
-	 	margin-bottom: 0;
-	 	padding: 10px 5px 30px 5px;
-	 	background-image: none;
-	 	border-radius: 0;
-	 	div {
-	 		ul {
-	 			padding: 0 15px;
-	 		}
-	 	}
-	 	.mint-logo {
-	 		top: -330px;
-	 		left: 50%;
-	 		margin-left: -67px;
-	 		}
-	 	}
-	.no-data {
-		width: 100%;
-	}
-	#footer {
-		height: 80px;
-		.fb-share-button {
-			top: 10px;
-			left: 50%;
-		}
-		.twitter-share-btn {
-			top: 14px;
-			left: 24.5%;
-		}
-		p {
-			left: 50%;
-			margin-left: -95.5px;
-		}
-	}
+
+// Functional styles
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
 }
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+// Partials import
+@import "rwd";

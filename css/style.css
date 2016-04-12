@@ -28,16 +28,25 @@ body {
   margin-bottom: 30px;
   background: url("assets/img/arrow-mustard.png") no-repeat;
   background-size: 40px 80px;
-  background-position: 85% 45px;
+  background-position: 88.4% 45px;
   background-color: #fff;
   border-radius: 30px; }
+  #content .subjects-menu {
+    margin: 40px 0px 0px 90px !important;
+    width: 85% !important;
+    height: 100px;
+    overflow: hidden;
+    transition: 1s; }
+    #content .subjects-menu .mint-button-secondary {
+      margin: 2px;
+      width: 175px;
+      line-height: 1rem; }
   #content h1 {
     width: 95%;
     margin: auto;
     font-size: 2.4rem !important;
     text-align: center;
     padding: 20px 0 10px 0;
-    margin-bottom: 30px;
     color: #ffbe32 !important; }
   #content .mint-logo {
     position: absolute;
@@ -113,15 +122,16 @@ li:nth-child(n + 3) div {
     text-align: center;
     padding: 20px; }
   .no-data #no-data-btn {
-    width: 195px;
+    width: 210px;
     margin: auto; }
 
 .mint-button-primary {
   margin: auto; }
 
 .mint-search {
-  margin: 20px 7.5% !important;
-  width: 85% !important; }
+  margin-left: 160px !important;
+  margin-top: 0px;
+  width: 600px !important; }
 
 .mint-input--transparent-border:focus {
   border-color: #ffbe32 !important; }
@@ -146,11 +156,26 @@ li:nth-child(n + 3) div {
     text-align: center;
     color: #383838; }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s; }
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s; }
+
 @media screen and (max-width: 600px) {
+  html {
+    font-size: 85%; }
   #header {
     background-attachment: initial; }
     #header h1 {
-      line-height: 2.2rem !important; }
+      font-size: 3rem;
+      line-height: 2.4rem !important; }
+      #header h1 span {
+        font-size: 3rem; }
   #content {
     width: 100vw;
     margin-top: 0;
@@ -158,6 +183,16 @@ li:nth-child(n + 3) div {
     padding: 10px 5px 30px 5px;
     background-image: none;
     border-radius: 0; }
+    #content .subjects-menu {
+      margin: 20px auto !important;
+      width: 90% !important;
+      height: 280px;
+      overflow: hidden;
+      transition: 1s; }
+      #content .subjects-menu .mint-button-secondary {
+        width: 90%;
+        margin-left: 5%;
+        line-height: 0.7rem; }
     #content div ul {
       padding: 0 15px; }
     #content .mint-logo {
@@ -166,14 +201,18 @@ li:nth-child(n + 3) div {
       margin-left: -67px; }
   .no-data {
     width: 100%; }
+  .mint-search {
+    margin-left: 5% !important;
+    margin-top: 0px;
+    width: 90% !important; }
   #footer {
     height: 80px; }
     #footer .fb-share-button {
-      top: 10px;
+      top: 13px;
       left: 50%; }
     #footer .twitter-share-btn {
       top: 14px;
-      left: 24.5%; }
+      left: 17%; }
     #footer p {
       left: 50%;
       margin-left: -95.5px; } }
